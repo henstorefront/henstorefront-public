@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+@import '../../styles/transitions.scss';
+
+.contact {
+    position: absolute;
+    color: var(--primary-color);
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    .contact__message {
+        animation: leftFadeIn 2.5s ease;
+        -webkit-animation: leftFadeIn 2.5s ease;
+        -moz-animation: leftFadeIn 2.5s ease;
+    }
+}

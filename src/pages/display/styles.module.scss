@@ -1,0 +1,206 @@
+@import '../../styles/variables.scss';
+@import '../../styles/transitions.scss';
+@import '../../styles/devices.scss';
+
+.display__message {
+    position: relative;
+
+    margin-top: 20vh;
+    padding-bottom: 25px;
+
+    animation: fixedFadeIn 2.5s ease;
+    -webkit-animation: fixedFadeIn 2.5s ease;
+    -moz-animation: fixedFadeIn 2.5s ease;
+    .display__message__top {
+        margin-bottom: 0;
+    }
+    .display__message__bottom {
+        margin-top: 0;
+    }
+}
+
+.display__message__buttons {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: -10px;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
+
+    .display__message__button {
+        position: relative;
+        width: auto;
+        border-radius: 2px;
+        border: 2px solid var(--primary-color);
+        background-color: var(--background-color);
+    
+        transition: 0.5s ease;
+        cursor: pointer;
+        z-index: 1;
+
+        padding: 12px;
+        margin: 0;
+        margin-left: 10px;
+
+        @media (max-width: 1024px) {
+            margin-bottom: 10px;
+        }
+    }
+    .display__message__button:hover {
+        z-index: 0;
+        transform: translateY(-5px);
+        box-shadow: 15px 15px 0px var(--primary-color);
+    }
+}
+
+.display__pages {
+    display: flex;
+    margin-left: auto;
+    flex-wrap: wrap;
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.display__page__numbers {
+    position: relative;
+    width: max-content;
+    border-radius: 2px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--background-color);
+
+    transition: 0.5s ease;
+    cursor: pointer;
+    z-index: 1;
+
+    padding: 12px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.display__page__numbers:hover {
+    z-index: 0;
+    transform: translateY(-5px);
+    box-shadow: 15px 15px 0px var(--primary-color);
+}
+
+.display__page__numbers.active {
+    border-radius: 2px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.display__split {
+    display: flex;
+    justify-content: space-between;
+}
+
+.objkt__titles {
+    margin-bottom: 0;
+}
+
+.objkt__data {
+    margin-top: 0;
+}
+
+.objkt__img {
+    max-height: 20%;
+    max-width: 20%;
+
+    @include respond-to('tablet') {
+        max-width: auto;
+        max-height: auto;
+    }
+}
+
+.state__message {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: var(--primary-color);
+
+    animation: fixedFadeIn 2.5s ease;
+    -webkit-animation: fixedFadeIn 2.5s ease;
+    -moz-animation: fixedFadeIn 2.5s ease;
+}
+
+img {
+    width: max-content;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2px;
+    border: 2px solid var(--primary-color);
+}
+
+video {
+    width: max-content;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2px;
+    border: 2px solid var(--primary-color);   
+}
+
+.objkts__cards {
+    padding-bottom: 100px;
+}
+
+.mobile__container {
+    @media (max-width: 1024px) {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.container__inner {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
+}
+
+.mobile__pages {
+    display: flex;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -5px;
+    z-index: 10;
+    @media (min-width: 1025px) {
+        display: none;
+    }
+}
+
+.trade__data {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.placeholder {
+    background-color: transparent;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.placeholder h1 {
+    text-align: center;
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+
+    animation: fixedFadeIn .1s ease;
+    -webkit-animation: fixedFadeIn .1s ease;
+    -moz-animation: fixedFadeIn .1s ease;
+}

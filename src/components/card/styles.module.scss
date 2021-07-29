@@ -1,0 +1,73 @@
+@import '../../styles/variables.scss';
+@import '../../styles/devices.scss';
+
+.card {
+    position: relative;
+    width: auto;
+    border-radius: 2px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--background-color);
+
+    transition: 0.5s ease;
+    cursor: pointer;
+    z-index: 1;
+
+    .card__content__inner {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        color: var(--primary-color);
+        padding: 1rem;
+    }
+}
+
+.card__special {
+    position: relative;
+    width: auto;
+    border-radius: 2px;
+    border: 2px solid var(--background-color);
+    background-color: var(--primary-color);
+
+    transition: 0.5s ease;
+    cursor: pointer;
+    z-index: 1;
+
+    .card__content__inner {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        color: var(--background-color);
+        padding: 1rem;
+
+        a {
+            color: var(--background-color);
+        }
+    }
+
+    .card__title {
+        color: var(--background-color);
+    }
+}
+
+.card:hover {
+    z-index: 0;
+    transform: translateY(-5px);
+    box-shadow: 15px 15px 0px var(--primary-color);
+}
+
+.card__title {
+    display: inline-block;
+    position: relative;
+    color: var(--primary-color);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.card__data {
+    position: relative;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

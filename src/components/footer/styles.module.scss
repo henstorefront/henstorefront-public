@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+@import '../../styles/transitions.scss';
+
+.box__fixed {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 340px;
+    height: fit-content;
+    z-index: 999;
+
+    background-color: var(--background-color);
+
+    animation: fixedFadeIn 0.3s ease;
+    -moz-animation: fixedFadeIn 0.3s ease;
+    -webkit-animation: fixedFadeIn 0.3s ease;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+footer {
+    padding: 12px;
+    border-radius: 2px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+
+    transition: background-color 0.2s ease-out,
+    color 0.5s ease-out;
+}
+
+.theme__button {
+    width: 16px;
+    height: 16px;
+    padding-left: 16px;
+    align-self: center;
+    margin-right: 12px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.button__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    margin-top: 0;
+    margin-bottom: 0;
+}

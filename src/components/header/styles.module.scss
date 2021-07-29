@@ -1,0 +1,209 @@
+@import '../../styles/variables.scss';
+@import '../../styles/transitions.scss';
+
+.bar__fixed {
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--background-color);
+
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    animation: fixedFadeIn 0.3s ease;
+    -moz-animation: fixedFadeIn 0.3s ease;
+    -webkit-animation: fixedFadeIn 0.3s ease;
+
+    transition: background-color 0.5s ease-out,
+    color 0.5s ease-out;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 22px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+
+    @media (max-width: 1024px) {
+        justify-content: space-around;
+    }
+}
+
+.logo {
+    position: relative;
+    left: 75px;
+    transition: transform .1s ease-in-out,
+        color 0.5s ease-out, background-color 0.5s ease-out; 
+    -moz-transition: transform .1s ease-in-out;
+    -webkit-transition: transform .1s ease-in-out;
+
+    @media (max-width: 1024px) {
+        left: 0;
+    }
+}
+.logo:hover {
+    transform: skewX(-10deg);
+    -moz-transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+}
+
+.nav__links {
+    display: flex;
+
+    margin-left: -50px;
+    margin-right: 50px;
+
+    a {
+        margin-left: 25px;
+        margin-right: 25px;
+        border-bottom: 2px solid var(--shadow-blank);
+        transition: 0.3s ease;
+        opacity: 0.85;
+    }
+    a:hover {
+        border-bottom: 2px solid var(--primary-color);
+        opacity: 1;
+    }
+    @media (max-width: 1024px) {
+        margin-right: 0;
+    }
+}
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.menu.inactive {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0;
+
+    top: 90px;
+    right: 25px;
+    transform: translateY(0px);
+
+    bottom: 25px;
+    right: 25px;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--background-color);
+
+    box-shadow: 0 0 0 99999px var(--shadow-color);
+    border-radius: 2px;
+    border: 2px solid var(--primary-color);
+
+    transition: 0.3s ease;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    @media (max-width: 1024px) {
+        display: block;
+        width: 95%;
+        left: 2.5%;
+        right: 2.5%;
+    }
+}
+.menu li {
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    text-align: left;
+
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+
+    &:last-child {
+        border-bottom: none;
+    }
+    &:first-child {
+        border-top: none;
+    }
+}
+
+.menu.active {
+    padding: 0;
+    display: block;
+
+    opacity: 1;
+    visibility: visible;
+
+    position: fixed;
+
+    top: 100px;
+    right: 25px;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--background-color);
+
+    box-shadow: 0 0 0 99999px var(--shadow-color);
+    border-radius: 2px;
+    border: 2px solid var(--primary-color);
+
+    transform: translateY(-20px);
+
+    transition: 0.3s ease;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    @media (max-width: 1024px) {
+        display: block;
+        width: 95%;
+        left: 2.5%;
+        right: 2.5%;
+    }
+}
+
+.dropdown__trigger {
+    margin-top: -15px;
+    margin-left: 25px;
+    border-radius: 2px;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 5px 15px 5px 15px;
+
+    box-shadow: 5px 5px 25px var(--shadow-blank);
+    transition: 0.3s ease;
+
+    background-color: transparent;
+    cursor: pointer;
+
+    @media (max-width: 1024px) {
+        margin-left: 15px;
+    }
+}
+.dropdown__trigger:hover {
+    box-shadow: 5px 5px 25px var(--shadow-color);
+}
+
+.nav__desktop {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.theme__button {
+    width: 16px;
+    height: 16px;
+    padding-left: 16px;
+    align-self: center;
+    margin-left: 25px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.theme__container {
+    display: flex;
+    @media (min-width: 1025px) {
+        display: none;
+    }
+}

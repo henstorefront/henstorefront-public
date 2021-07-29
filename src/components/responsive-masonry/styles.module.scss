@@ -1,0 +1,19 @@
+@import '../../styles/devices.scss';
+
+.grid {
+    display: flex;
+    margin-left: -10px;
+    width: auto;
+  }
+  
+  .column {
+    padding-left: 10px;
+    background-clip: padding-box;
+
+    @media (max-width: 1024px) {
+    }
+    & > * {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

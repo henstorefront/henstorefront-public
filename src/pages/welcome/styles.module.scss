@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+@import '../../styles/transitions.scss';
+
+.welcome {
+    position: relative;
+    color: var(--primary-color);
+
+    left: -10px;
+    margin-top: 20vh;
+    padding-bottom: 50px;
+
+    .welcome__message {
+        animation: leftFadeIn 2.5s ease;
+        -webkit-animation: leftFadeIn 2.5s ease;
+        -moz-animation: leftFadeIn 2.5s ease;
+    }
+    @media (max-width: 600px) {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.card__container {
+    position: relative;
+    margin-top: 50px;
+
+    animation: leftFadeIn .5s ease;
+    -webkit-animation: leftFadeIn .5s ease;
+    -moz-animation: leftFadeIn .5s ease;
+}

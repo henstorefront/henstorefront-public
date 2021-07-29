@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+@import '../../styles/transitions.scss';
+
+.favorites {
+    position: relative;
+    color: var(--primary-color);
+
+    left: -10px;
+    margin-top: 20vh;
+    padding-bottom: 50px;
+    .favorite__message {
+        animation: leftFadeIn 2.5s ease;
+        -webkit-animation: leftFadeIn 2.5s ease;
+        -moz-animation: leftFadeIn 2.5s ease;
+    }
+}
+
+.creator__avatar {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inner__infos {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.card__container {
+    position: relative;
+    margin-top: 50px;
+
+    animation: leftFadeIn .5s ease;
+    -webkit-animation: leftFadeIn .5s ease;
+    -moz-animation: leftFadeIn .5s ease;
+}

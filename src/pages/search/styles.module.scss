@@ -1,0 +1,73 @@
+@import '../../styles/variables.scss';
+@import '../../styles/transitions.scss';
+
+.search {
+  position: relative;
+
+  margin-top: 20vh;
+  padding-bottom: 50px;
+
+  .search__message {
+    animation: leftFadeIn 2.5s ease;
+    -webkit-animation: leftFadeIn 2.5s ease;
+    -moz-animation: leftFadeIn 2.5s ease;
+  }
+
+  .search__bar {
+    width: 60%;
+    height: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.search__container {
+  position: relative;
+  margin-top: 150px;
+
+  animation: leftFadeIn .5s ease;
+  -webkit-animation: leftFadeIn .5s ease;
+  -moz-animation: leftFadeIn .5s ease;
+}
+  
+.search__term {
+  font-size: 1em;
+  text-align: center;
+  color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--primary-color);
+  border-right: none;
+  padding: 5px;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  outline: none;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+
+  transition: background-color 0.5s ease-out,
+  color 0.5s ease-out;
+}
+  
+.search__button {
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  font-size: 1em;
+  width: 20%;
+  border: 2px solid var(--primary-color);
+  border-left: none;
+  cursor: pointer;
+
+  transition: background-color 0.5s ease-out,
+  color 0.5s ease-out;
+}
+
+.search__errors {
+  padding-top: 30px;
+  text-align: center;
+}
+
